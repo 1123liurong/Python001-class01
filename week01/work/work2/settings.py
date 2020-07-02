@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for spiders project
+# Scrapy settings for work2 project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,18 +9,17 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'spiders'
+BOT_NAME = 'work2'
 
-SPIDER_MODULES = ['spiders.spiders']
-NEWSPIDER_MODULE = 'spiders.spiders'
+SPIDER_MODULES = ['work2.spiders']
+NEWSPIDER_MODULE = 'work2.spiders'
 
 
-# Crawl responsibly by dentifying yourself (and your website) on the user-agent
+# Crawl responsibly by identifying yourself (and your website) on the user-agent
+#USER_AGENT = 'work2 (+http://www.yourdomain.com)'
 from fake_useragent import UserAgent
-#USER_AGENT = 'spiders (+http://www.yourdomain.com)'
 ua = UserAgent()
-USER_AGENT =ua.random
-
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
@@ -31,7 +30,7 @@ ROBOTSTXT_OBEY = True
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 #DOWNLOAD_DELAY = 3
-DOWNLOAD_DELAY = 2
+DOWNLAOD_DELAY = 1
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
@@ -51,13 +50,13 @@ DOWNLOAD_DELAY = 2
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'spiders.middlewares.SpidersSpiderMiddleware': 543,
+#    'work2.middlewares.Work2SpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'spiders.middlewares.SpidersDownloaderMiddleware': 543,
+#    'work2.middlewares.Work2DownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -69,7 +68,7 @@ DOWNLOAD_DELAY = 2
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'spiders.pipelines.SpidersPipeline': 300,
+   'work2.pipelines.Work2Pipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

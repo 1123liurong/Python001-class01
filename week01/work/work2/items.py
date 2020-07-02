@@ -8,11 +8,10 @@
 import scrapy
 
 
-class SpidersItem(scrapy.Item):
+class Work2Item(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-   # pass
-   #设置要保存的内容
-   movie_name = scrapy.Field()
-   movie_type = scrapy.Field()
-   movie_time = scrapy.Field()
+    movie_name = scrapy.Field()
+    movie_type = scrapy.Field()
+    movie_time = scrapy.Field()
+
