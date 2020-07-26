@@ -22,6 +22,5 @@
   问题2 需要的词不认识，user_dict 设置 词+设置权重+词性
         动态加载jieba.add_word('极客大学')
 	jieba.del_word('极客大学')删除
-	jieba.suggest_freq('中出',True) 将错分的词分开
 
      
